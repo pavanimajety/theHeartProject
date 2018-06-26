@@ -2,98 +2,10 @@
 
 **A PROJECT REPORT**
 
-*Submitted in partial fulfillment of the*
 
-*requirement for the award of the *
 
-*Degree of*
-
-**BACHELOR OF TECHNOLOGY**
-
-**in **
-
-**ELECTRONICS AND COMMUNICATION ENGINEERING**
-
-*By*
-
-**Pavani Majety 11BEC1027**
-
-**Nikita Sahay 11BEC1103**
-
-*Under the Guidance of*
-
-**Prof. VENKATASUBRAMANIAN KRISHNAMOORTHY**
-
-![](media/image1.jpeg){width="2.178153980752406in" height="1.125in"}
-
-SCHOOL OF ELECTRONICS ENGINEERING
-
-VIT University
-
-CHENNAI. (TN) 600127
 
 *(MAY 2015)*
-
-**CLINICAL HEART MONITORING SYSTEM **
-
-**A PROJECT REPORT**
-
-*Submitted in partial fulfillment of the\
-requirement for the award of the *
-
-*Degree of*
-
-**BACHELOR OF TECHNOLOGY\
-in **
-
-**ELECTRONICS AND COMMUNICATION ENGINEERING**
-
-*By*
-
-**Pavani Majety 11BEC1027**
-
-**Nikita Sahay 11BEC1103**
-
-*Under the Guidance of*
-
-**Prof. VENKATASUBRAMANIAN KRISHNAMOORTHY**
-
-![](media/image1.jpeg){width="2.170171697287839in"
-height="1.1206627296587925in"}
-
-SCHOOL OF ELECTRONICS ENGINEERING
-
-VIT University
-
-CHENNAI. (TN) 600127
-
-*(MAY 2015)*
-
-*CERTIFICATE*
-
-This is to certify that the Project work titled “*Clinical Heart
-Monitoring System*” that is being submitted by “*Pavani Majety and
-Nikita Sahay*” is in partial fulfillment of the requirements for the
-award of Bachelor of Technology, is a record of bonafide work done under
-my guidance. The contents of this Project work, in full or in parts,
-have neither been taken from any other source nor have been submitted to
-any other Institute or University for award of any degree or diploma and
-the same is certified.
-
-**Prof. K.VENKATASUBRAMANIAN **
-
-**Guide **
-
-**The thesis is satisfactory / unsatisfactory**
-
-**Internal Examiner External Examiner**
-
-Approved by
-
-Program Chair
-
-***This project is dedicated to our parents for their never-ending
-support and constant faith in our capabilities…***
 
 ACKNOWLEDGEMENT
 ===============
@@ -112,7 +24,6 @@ helped us in completion of this project.
 
 PAVANI MAJETY NIKITA SAHAY
 
-**(**11BEC1027) **(**11BEC1103)
 
 ABSTRACT
 ========
@@ -1293,8 +1204,9 @@ calculated is used for comparison between the signals.
 
 *2 Beats per frame:*
 
-Test Signal: 04 Apex, Mid Sys Click, Supine, ll\_0.00-0.08.wav
+_Test Signal: 04 Apex, Mid Sys Click, Supine, ll\_0.00-0.08.wav_
 
+```
 totaltime = 8.9088 %in Seconds
 
 totalenergy = 1.8778e+009 %total energy of the signal = \[abs(fft)\]2
@@ -1302,7 +1214,7 @@ totalenergy = 1.8778e+009 %total energy of the signal = \[abs(fft)\]2
 %percentile energy per frame
 
 percentile\_frame = 0.0049 0.0077 0.0031 0.0079 0.0079 0.0049 0.0079
-
+```
 Percentile Energy calculated per frame, where each frame consists of 2
 beats)
 
@@ -1316,8 +1228,8 @@ in spite of having the same number of beats per frame.
 
 Database signal:
 
-02 Apex, Split S1, Supine, bell\_0.00-0.07.wav
-
+_02 Apex, Split S1, Supine, bell\_0.00-0.07.wav_
+```
 fs = 44100 %Hz
 
 totalenergy = 4.1233e+008
@@ -1325,7 +1237,7 @@ totalenergy = 4.1233e+008
 %percentile energy per frame
 
 percentile\_frame = 0.0070 0.0066 0.0072 0.0108 0.0111 0.0098 0.0114
-
+```
 ![](media/image17.png){width="5.968055555555556in" height="2.15625in"}
 
 <span id="_Toc419116457" class="anchor"></span>Figure 4.3: Energy
@@ -1335,7 +1247,7 @@ Figure 4.3, shows, energy percentile calculation for database signal
 with frame size 2 beats per frame.
 
 *4 beats per frame:*
-
+```
 Test Signal: 05 Apex, S3, LLD, Bell\_part 5.1
 
 totaltime = 9.0656 %in seconds
@@ -1347,7 +1259,7 @@ frame
 
 (Percentile Energy calculated per frame, where each frame consists of 4
 beats)
-
+```
 ![](media/image18.png){width="5.960416666666666in"
 height="2.1506944444444445in"}
 
@@ -1358,13 +1270,13 @@ In figure 4.4, it is seen that evergy frame doesn’t have the same energy
 in spite of having the same number of beats per frame.
 
 Database Signal: 06 Apex, Early Sys Mur, Supine, Bell\_part 6.1
-
+```
 totaltime =10.0582 %in seconds
 
 totalenergy =5.6634e+008
 
 percentile\_frame = 0.0137 0.0142 0.0275 0.0143 0.0271 0.0147 0.0271
-
+```
 ![](media/image19.png){width="5.968055555555556in" height="2.15625in"}
 
 Figure 4.5, shows, energy percentile calculation for database signal
@@ -1387,10 +1299,6 @@ with frame size 4 beats per frame.
     1.  ### Prototype II: Using Stochastic Estimate (Correlation) to classify the signals.
 
 #### Algorithm: Using Stochastic Estimate (Correlation) to classify the signals.
-
-TRUE FALSE
-
-TRUE FALSE
 
 #### Explanation:\
 \
@@ -1612,7 +1520,7 @@ Here the rows& columns represent the output match of different sets of
 S1 to S1 correlated with different database signal sets.
 
 *10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part 10.1.wav*
-
+```
 cc1 =
 
 11 11 11 11 11 11 11 11 11
@@ -1628,9 +1536,9 @@ cc1 =
 11 11 11 11 11 11 11 11 11
 
 11 11 11 11 11 11 11 11 11
-
+```
 *04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav *
-
+```
 cc2 =
 
 11 11 11 11 11 11 11 11
@@ -1650,9 +1558,9 @@ cc2 =
 11 10 11 10 11 11 11 11
 
 11 11 11 11 11 11 11 11
-
+```
 *03 Apex, S4, LLD, Bell\_part 3.3.wav *
-
+```
 cc3 = 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
@@ -1666,9 +1574,9 @@ cc3 = 10 10 10 10 10 10 10 10 10
 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
-
+```
 *05 Apex, S3, LLD, Bell\_part 5.4.wav *
-
+```
 cc4 = 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
@@ -1686,9 +1594,9 @@ cc4 = 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
-
+```
 *06 Apex, Early Sys Mur, Supine, Bell\_part 6.3.wav *
-
+```
 cc5 =
 
 10 10 10 10 10 10 10 10 10
@@ -1708,9 +1616,9 @@ cc5 =
 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
-
+```
 *09 Apex, Holo Sys Mur, Supine, Bell\_part 9.1.wav *
-
+```
 cc6 =
 
 11 10 10 10 11 10 10 10 10 10
@@ -1730,9 +1638,9 @@ cc6 =
 11 10 11 11 11 10 10 11 11 10
 
 11 10 10 10 11 10 10 10 10 10
-
+```
 *01 Apex, Normal S1 S2, Supine, Bell - Copy\_part 1.1.wav *
-
+```
 ccnormal = 101 101 101 101 101 101 101 101
 
 101 101 101 101 101 101 101 101
@@ -1750,7 +1658,7 @@ ccnormal = 101 101 101 101 101 101 101 101
 101 101 101 101 101 101 101 101
 
 101 101 101 101 101 101 101 101
-
+```
 ***Conclusion: ***
 
 1\. The maximum number of 11s are observed in the case of cc1 which
@@ -1984,31 +1892,6 @@ on LCD display through 8051
     1.  ### IEEE754 is technical standard for floating point computation.
 
 CHAPTER V
-=========
-
- SCHEDULES, TASKS AND MILESTONES
-================================
-
-There were four major milestones in this project.
-
--   Hardware Signal Conditioning Circuit Implementation
-
--   Developing algorithm for classifying the sounds in MATLAB
-
--   Conversion of MATLAB implemented functions into C code to dump
-    into DSK6713.
-
--   Recording Abnormal Heart sounds in real time and denoising the
-    signal in DSK6713
-
-Tasks were split up among group members according to each member’s level
-of expertise or comfort. Each task will have a leader who is responsible
-for completion of that task. However, the other group members are
-expected to provide assistance if needed. This way, an engineer can
-concentrate on a task but still get help if needed. Also, each tasks\`
-respective leader is held accountable if the task fails.
-
-CHAPTER VI
 ==========
 
 PROJECT DEMONSTRATION
@@ -2028,7 +1911,7 @@ a heart disease, it is a little impractical to have the live
 demonstration with an unhealthy patient. Therefore a video of the
 demonstration will be shown.
 
-CHAPTER VII
+CHAPTER VI
 ===========
 
 COST ANALYSIS
@@ -2046,7 +1929,7 @@ Heart Monitoring System.
   5.          Other Components      500
               Total                 32000
 
-CHAPTER VIII
+CHAPTER VII
 ============
 
 SUMMARY
@@ -2108,13 +1991,3 @@ REFERENCES
     Murmur Library”\[Online\]Available at
     <https://www.umms.med.umich.edu/psb/>.
 
-Appendix A
-==========
-
-Gantt Chart {#gantt-chart .ListParagraph}
------------
-
-![](media/image45.png){width="7.229868766404199in"
-height="6.027216754155731in"}
-
-<span id="_Toc419116484" class="anchor"></span>Figure A.1: Gantt Chart
