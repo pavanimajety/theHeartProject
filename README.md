@@ -3,118 +3,6 @@ HEART SOUND ANALYSIS**
 
 **A PROJECT REPORT**
 
-*Submitted in partial fulfillment of the*
-
-*requirement for the award of the *
-
-*Degree of*
-
-**BACHELOR OF TECHNOLOGY**
-
-**in **
-
-**ELECTRONICS AND COMMUNICATION ENGINEERING**
-
-*By*
-
-**Pavani Majety 11BEC1027**
-
-**Nikita Sahay 11BEC1103**
-
-*Under the Guidance of*
-
-**Prof. VENKATASUBRAMANIAN KRISHNAMOORTHY**
-
-![](./media/media/image1.jpeg){width="2.178153980752406in"
-height="1.125in"}
-
-SCHOOL OF ELECTRONICS ENGINEERING
-
-VIT University
-
-CHENNAI. (TN) 600127
-
-*(MAY 2015)*
-
-**DESIGN OF AN EMBEDDED SYSTEM TO RECOGNISE HEART DISEASES BASED ON
-HEART SOUND ANALYSIS**
-
-**A PROJECT REPORT**
-
-*Submitted in partial fulfillment of the\
-requirement for the award of the *
-
-*Degree of*
-
-**BACHELOR OF TECHNOLOGY\
-in **
-
-**ELECTRONICS AND COMMUNICATION ENGINEERING**
-
-*By*
-
-**Pavani Majety 11BEC1027**
-
-**Nikita Sahay 11BEC1103**
-
-*Under the Guidance of*
-
-**Prof. VENKATASUBRAMANIAN KRISHNAMOORTHY**
-
-![](./media/media/image1.jpeg){width="2.170171697287839in"
-height="1.1206627296587925in"}
-
-SCHOOL OF ELECTRONICS ENGINEERING
-
-VIT University
-
-CHENNAI. (TN) 600127
-
-*(MAY 2015)*
-
-*CERTIFICATE*
-
-This is to certify that the Project work titled “*Design of an Embedded
-System to recognise Heart Diseases based on Heart Sound Analysis*” that
-is being submitted by “*Pavani Majety and Nikita Sahay*” is in partial
-fulfillment of the requirements for the award of Bachelor of Technology,
-is a record of bonafide work done under my guidance. The contents of
-this Project work, in full or in parts, have neither been taken from any
-other source nor have been submitted to any other Institute or
-University for award of any degree or diploma and the same is certified.
-
-> **Prof. K.VENKATASUBRAMANIAN Guide **
-
-**The thesis is satisfactory / unsatisfactory**
-
-**Internal Examiner External Examiner**
-
-Approved by
-
-Program Chair
-
-*This project is dedicated to our parents for their never-ending
-support…*
-
-***ACKNOWLEDGEMENTS***
-
-Gratitude is said to be short lived, but when put in black and white it
-bears greater impression on mind. We would like to extent special
-gratitude to my guide Prof. Venkatsubramanian Krishnamoorthy and Prof.
-V. Umamaheshwari who devoted their full effort in guiding and
-encouraging us in achieving our goal. We are extremely thankful to Dr.
-M. Mallikarjun and Dr. Seshagiri Rao for extending their support in
-providing the basic clinical information and helping us move forward
-with the project. We also thank the guidance given by the supervisor,
-mentor, panel and our program manager whose advices helped us to improve
-our presentation skills and manuscript. I will further like to thank to
-all those who directly or indirectly helped us in completion of this
-project.
-
-**11BEC1027 11BEC1103**
-
-(PAVANI MAJETY) (NIKITA SAHAY)
-
 ***ABSTRACT***
 
 Stethoscope is one of the critical tools used to assess a patient’s
@@ -139,119 +27,8 @@ state of the heart, i.e., diseased or normal - if diseased, what is the
 possible heart disease and where the abnormality is occurring.
 
 **TABLE OF CONTENTS**
+==============
 
-List of figures
-===============
-
-[Figure 1: Heart
-13](file:///F:\thesis_without-dsk-screenshots.docx#_Toc416271995)
-
-[Figure 2:Ventricular Gallop 14](#_Toc416271996)
-
-[Figure 3: Atrial Gallop 15](#_Toc416271997)
-
-[Figure 4: Heart murmurs and their positions^\[1\]^
-18](file:///F:\thesis_without-dsk-screenshots.docx#_Toc416271998)
-
-[Figure 5:TMS320C6713 23](#_Toc416271999)
-
-[Figure 6: ESA MCB 51 Kit – Block Diagram 28](#_Toc416272000)
-
-[Figure 7: CC Studio - Steps 30](#_Toc416272001)
-
-[Figure 8: FDATOOL 33](#_Toc416272002)
-
-[Figure 9: Keil Debugger 35](#_Toc416272003)
-
-[Figure 10: LCD Description 36](#_Toc416272004)
-
-[Figure 11: Options for Target in Keil 37](#_Toc416272005)
-
-[Figure 12: Microcontroller/ Microprocessor - Device Selection in Keil
-38](#_Toc416272006)
-
-[Figure 13: Preamplifier Circuit 40](#_Toc416272007)
-
-[Figure 14: Amplifier Circuit 40](#_Toc416272008)
-
-[Figure 15: Signal Conditioning Circuit with LM386 42](#_Toc416272009)
-
-[Figure 16: Tuning the stethoscope between bell and diaphragm
-43](#_Toc416272010)
-
-[Figure 17: Energy percentile calculation: test signal : 2beats per
-frame 48](#_Toc416272011)
-
-[Figure 18: Energy percentile calculation: database signal
-49](#_Toc416272012)
-
-[Figure 19: Energy percentile Calculations, Test Signal
-49](#_Toc416272013)
-
-[Figure 20: Energy percentile calculations: Database Signal
-50](file:///F:\thesis_without-dsk-screenshots.docx#_Toc416272014)
-
-[Figure 21: Signal in Time domain 53](#_Toc416272015)
-
-[Figure 22: Envelope of the Signal 54](#_Toc416272016)
-
-[Figure 23: Rectified signal for further peak detection
-54](#_Toc416272017)
-
-[Figure 24: Normalized signal 55](#_Toc416272018)
-
-[Figure 25: The separated signal which will be used for correlation
-55](#_Toc416272019)
-
-[Figure 26: 03 Apex, S4, LLD, Bell\_part 3.3 56](#_Toc416272020)
-
-[Figure 27: 04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav
-56](#_Toc416272021)
-
-[Figure 28: 05 Apex, S3, LLD, Bell\_part 5.4.wav 57](#_Toc416272022)
-
-[Figure 29: 06 Apex, Early Sys Mur, Supine, Bell\_part 6.3.wav
-57](#_Toc416272023)
-
-[Figure 30: 09 Apex, Holo Sys Mur, Supine, Bell\_part 9.1
-58](#_Toc416272024)
-
-[Figure 31: 10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part 10.2.wav
-58](#_Toc416272025)
-
-[Figure 32: 01 Apex, Normal S1 S2, Supine, Bell - Copy\_part 1.1.wav
-59](#_Toc416272026)
-
-[Figure 33: Notations followed 59](#_Toc416272027)
-
-[Figure 34: Working Screenshot of the project 65](#_Toc416272028)
-
-[Figure 35: *Test Signal:* X11: 10 Aortic, Sys Click & Late Sys Mur,
-LLD, Bell 65](#_Toc416272029)
-
-[Figure 36: Database Signal 1: 04 Apex, Mid Sys Click, Supine,
-Bell\_part 4.5.wav 66](#_Toc416272030)
-
-[Figure 37: *Database Signal 2:* 10 Apex, Sys Click & Late Sys Mur, LLD,
-Bell\_part 10.5.wav 66](#_Toc416272031)
-
-[Figure 38: *Database Signal 3*: 03 Apex, S4, LLD, Bell\_part 3.3.wav
-67](#_Toc416272032)
-
-[Figure 39: Database Signal 4: 05 Apex, S3, LLD, Bell\_part 5.4.wav
-67](#_Toc416272033)
-
-[Figure 40: Correlation with Database signal 1: 68](#_Toc416272034)
-
-[Figure 41: Correlation with Database signal 2: 68](#_Toc416272035)
-
-[Figure 42: Correlation with Database signal 3: 69](#_Toc416272036)
-
-[Figure 43: Correlation with Database signal 4: 69](#_Toc416272037)
-
-[Figure 44: Output shown on LCD display through 8051 70](#_Toc416272038)
-
-[Figure 45: Gantt Chart 75](#_Toc416272039)
 
 CHAPTER I: INTRODUCTION 
 ========================
@@ -266,8 +43,8 @@ Objective
     further classify it as normal or diseased. If diseased, the
     “probable” heart disease is identified.
 
-    1.  Motivation & Background
-        -----------------------
+Motivation & Background
+-----------------------
 
 For any living organism, nutrition and oxygen, depending on the fact
 that it is either aerobic or anaerobic, are continuously necessary for
@@ -332,8 +109,8 @@ pulmonary and aortic valves will generate the ***Second Heart
 Sound(S2)*** which is again a normal physiological process with a
 characteristic sound.
 
-![](./media/media/image2.jpeg){width="2.942361111111111in"
-height="3.801388888888889in"}
+![](./media/media/image2.jpeg = 200x200  )
+Figure 1: Cross-Section of a Heart
 
 Thus in a normal heart, under physiological conditions, continuous
 synchronized contraction, ‘systole’ and relaxation, ‘diastole’ occur
@@ -362,21 +139,17 @@ occurs just after S2 when the mitral valve opens allowing passive
 filling of the left ventricle. The S3 sound is actually produced by the
 large amount of blood striking a compliant left ventricle (LV).
 
-![](./media/media/image3.jpeg){width="3.7083333333333335in"
-height="2.275094050743657in"}
+![](./media/media/image3.jpeg)
 
-<span id="_Toc416271996" class="anchor"></span>Figure 2:Ventricular
-Gallop
+Figure 2:Ventricular Gallop
 
 The ***Fourth Heart Sound (S4)*** known as the “atrial gallop”, occurs
 just before S1 when the atria contract to force blood into the LV. If
 the LV is non-compliant and atrial contraction forces blood through the
 AV valves, an S4 is produced by the blood striking the LV.
 
-![](./media/media/image4.jpeg){width="3.5706233595800523in"
-height="2.0104166666666665in"}
-
-<span id="_Toc416271997" class="anchor"></span>Figure 3: Atrial Gallop
+![](./media/media/image4.jpeg)
+Figure 3: Atrial Gallop
 
 ### Heart Murmurs
 
@@ -439,7 +212,7 @@ when it rises from the left ventricular outflow tract, and in the
 pulmonary area when it arises from the right ventricular outflow tract .
 It is best heard with the diaphragm of the stethoscope while the patient
 sits forward. Important causes of aortic ejection murmurs are
-aortic<span id="page9" class="anchor"></span> stenosis.
+aortic stenosis.
 
 Aortic Regurgitation also produces an ejection murmur due to the
 increased stroke volume and velocity of ejection. Pulmonary ejection
@@ -468,8 +241,8 @@ murmurs are caused by turbulent flow through the atrio-ventricular
 valves. They start after valve opening, relatively late after the second
 sound, and continue for a variable period during the mid-diastole.
 
-![](./media/media/image5.jpeg){width="6.510416666666667in"
-height="4.197916666666667in"}
+![](./media/media/image5.jpeg)
+Figure 5: This figure represents the description of various Heart Sounds
 
 Mitral stenosis is the principal cause of a mid-diastolic murmur which
 is best heard at the cardiac apex using the bell of the stethoscope
@@ -491,8 +264,7 @@ audible murmurs are associated with abnormal openings between the left
 ventricle and right heart or from the aortic or pulmonary arteries back
 into a lower pressure heart chamber.
 
-![](./media/media/image6.jpeg){width="7.309722222222222in"
-height="6.944444444444444e-3in"}
+![](./media/media/image6.jpeg)
 
 Physicians have always used patients' chest sounds for diagnosis of
 diseases. This practice can be tracked back to 1500 B.C. But, it was not
@@ -598,25 +370,10 @@ intensive tasks.
 CHAPTER III: TECHNICAL SPECIFICATIONS
 =====================================
 
-1.  <span id="_Toc416233024" class="anchor"><span id="_Toc416233137"
-    class="anchor"><span id="_Toc416233270" class="anchor"><span
-    id="_Toc416271749" class="anchor"><span id="_Toc416271903"
-    class="anchor"></span></span></span></span></span>
+1.  HARDWARE
+    --------
 
-2.  <span id="_Toc416233025" class="anchor"><span id="_Toc416233138"
-    class="anchor"><span id="_Toc416233271" class="anchor"><span
-    id="_Toc416271750" class="anchor"><span id="_Toc416271904"
-    class="anchor"></span></span></span></span></span>
-
-3.  <span id="_Toc416233026" class="anchor"><span id="_Toc416233139"
-    class="anchor"><span id="_Toc416233272" class="anchor"><span
-    id="_Toc416271751" class="anchor"><span id="_Toc416271905"
-    class="anchor"></span></span></span></span></span>
-
-    1.  HARDWARE
-        --------
-
-        1.  ### TMS320C6713.
+    1.  ### TMS320C6713.
 
 The DSK package is powerful, comparatively economical, given the
 necessary hardware and software support tools for real-time signal
@@ -630,9 +387,9 @@ readily. A daughter card expansion is also provided on the DSK board.
 Two 80-pin connectors provide for external peripheral and external
 memory interfaces.
 
-![](./media/media/image7.jpg){width="5.71875in" height="2.84375in"}
+![](./media/media/image7.jpg)
 
-<span id="_Toc416271999" class="anchor"></span>Figure 5:TMS320C6713
+Figure 5:TMS320C6713
 
 The DSK board includes 16 MB (megabytes) of synchronous dynamic random
 access memory (SDRAM) and 256kB (kilobytes) of flash memory. Four
@@ -817,16 +574,14 @@ Vision Debugger. The Flash monitor allows the user to program and debug
 the on-chip code. The monitor uses the on-chip UART to communicate with
 mVision Debugger.
 
-![](./media/media/image8.png){width="4.729166666666667in"
-height="2.7708333333333335in"}
-
-<span id="_Toc416272000" class="anchor"></span>Figure 6: ESA MCB 51 Kit
+![](./media/media/image8.png)
+Figure 6: ESA MCB 51 Kit
 – Block Diagram
 
-1.  SOFTWARE
+2.  SOFTWARE
     --------
 
-    1.  ### Code Composer Studio\
+    1.  ### Code Composer Studio
 
 Code Composer Studio is an integrated development environment (IDE) that
 supports TI's Microcontroller and Embedded Processors portfolio. Code
@@ -855,11 +610,8 @@ for data exchange between the host PC and the target DSK, as well as
 analysis in real time without stopping the target. Key statistics and
 performance can be monitored in real time.
 
-![](./media/media/image9.png){width="6.235849737532808in"
-height="4.878386920384952in"}
-
-<span id="_Toc416272001" class="anchor"></span>Figure 7: CC Studio -
-Steps
+![](./media/media/image9.png)
+Figure 7: CC Studio - Steps
 
 Useful Types of Files
 
@@ -924,7 +676,7 @@ Through the JTAG, communication with on-chip emulation support occurs to
 control and monitor program execution. The C6713 DSK board includes a
 JTAG interface through the USB port.
 
-### MATLAB
+	2. ### MATLAB
 
 MATLAB is a high performance language for technical computing. The
 fundamental milestone of this project is investigation and
@@ -969,10 +721,8 @@ for analyzing filters, such as magnitude and phase response and
 pole-zero plots. The values and specifications are provided to design
 the required filter as given in the below fdatool box.
 
-![](./media/media/image10.png){width="3.405660542432196in"
-height="2.751453412073491in"}
-
-<span id="_Toc416272002" class="anchor"></span>Figure 8: FDATOOL
+![](./media/media/image10.png)
+Figure 8: FDATOOL
 
 Filter coefficients are exported to our project in CCS by generating an
 ANSI C header file that contains those coefficients. The header file
@@ -984,8 +734,6 @@ coefficients in its memory and writes the coefficients to the allocated
 memory and further exports to CC Studio.
 
 #### Designing a filter using FDATOOL:
-
-<span id="zmw57dd0e10460" class="anchor"></span>
 
 Several responses can be chosen as per the necessary conditions from the
 list below -
@@ -1023,14 +771,12 @@ either in the response region or in a separate window.
 -   Zero-phase response — available from the *y*-axis context menu in a
     Magnitude or Magnitude and Phase response plot.
 
-    1.  ### Keil µVision
+    3.  ### Keil µVision
 
 Typical layout of the flash monitor and Keil debugger is as follows.
 
-![](./media/media/image11.png){width="5.59375in"
-height="2.5416666666666665in"}
-
-<span id="_Toc416272003" class="anchor"></span>Figure 9: Keil Debugger
+![](./media/media/image11.png)
+Figure 9: Keil Debugger
 
 On-Chip UART signals are available through MAX 232 on a RJ-11 connector.
 The ESA MCB 51 is built around AT89C51ED2/RD2; this board provides a
@@ -1059,11 +805,9 @@ line starts from 00H to 14H and the second line starts from 29H to 3CH.
 
 #### LCD Pin Description and Interface to MCU
 
-![](./media/media/image12.png){width="4.75in"
-height="3.0275984251968504in"}
+![](./media/media/image12.png)
 
-<span id="_Toc416272004" class="anchor"></span>Figure 10: LCD
-Description
+Figure 10: LCD Description
 
 LCD module has an automatic reset, which is critically dependent upon
 power supply voltage. Voltage has to rise from 0.2V to 5V within 10 to
@@ -1085,42 +829,14 @@ code.
 
 #### Integration with KEIL: Settings to be made
 
-![](./media/media/image13.png){width="6.0in"
-height="4.456410761154856in"}
+![](./media/media/image13.png)
+Figure 11: Options for Target in Keil
 
-<span id="_Toc416272005" class="anchor"></span>Figure 11: Options for
-Target in Keil
-
-![](./media/media/image14.png){width="6.0in"
-height="4.456410761154856in"}
-
-<span id="_Toc416272006" class="anchor"></span>Figure 12:
-Microcontroller/ Microprocessor - Device Selection in Keil
+![](./media/media/image14.png)
+Figure 12: Microcontroller/ Microprocessor - Device Selection in Keil
 
 CHAPTER IV: DESIGN APPROACH AND DETAILS
 =======================================
-
-1.  <span id="_Toc416233037" class="anchor"><span id="_Toc416233149"
-    class="anchor"><span id="_Toc416233282" class="anchor"><span
-    id="_Toc416271761" class="anchor"><span id="_Toc416271915"
-    class="anchor"></span></span></span></span></span>
-
-<!-- -->
-
-1.  <span id="_Toc416233038" class="anchor"><span id="_Toc416233150"
-    class="anchor"><span id="_Toc416233283" class="anchor"><span
-    id="_Toc416271762" class="anchor"><span id="_Toc416271916"
-    class="anchor"></span></span></span></span></span>
-
-2.  <span id="_Toc416233039" class="anchor"><span id="_Toc416233151"
-    class="anchor"><span id="_Toc416233284" class="anchor"><span
-    id="_Toc416271763" class="anchor"><span id="_Toc416271917"
-    class="anchor"></span></span></span></span></span>
-
-3.  <span id="_Toc416233040" class="anchor"><span id="_Toc416233152"
-    class="anchor"><span id="_Toc416233285" class="anchor"><span
-    id="_Toc416271764" class="anchor"><span id="_Toc416271918"
-    class="anchor"></span></span></span></span></span>
 
     1.   MODULE 1: *Signal Conditioning:* Amplification of Heart Sound and Noise Filtering 
         -----------------------------------------------------------------------------------
@@ -1131,17 +847,11 @@ CHAPTER IV: DESIGN APPROACH AND DETAILS
 
 **Audio Amplifier:**
 
-![](./media/media/image15.jpeg){width="2.865384951881015in"
-height="2.7229461942257216in"}
+![](./media/media/image15.jpeg)
+Figure 13: Preamplifier Circuit
 
-<span id="_Toc416272007" class="anchor"></span>Figure 13: Preamplifier
-Circuit
-
-![](./media/media/image16.png){width="4.25in"
-height="2.723183508311461in"}
-
-<span id="_Toc416272008" class="anchor"></span>Figure 14: Amplifier
-Circuit
+![](./media/media/image16.png)
+Figure 14: Amplifier Circuit
 
 #### Circuit Characteristics:
 
@@ -1194,15 +904,12 @@ Circuit
 -   A huge attenuation in the amplitude of the input signal was observed
     when the order of filter was increased to make a steep filter.
 
-    1.  ### Prototype II:
+    2.  ### Prototype II:
 
 **Heart Sound - Signal Conditioning Circuit**
 
-![](./media/media/image17.emf){width="6.673077427821522in"
-height="3.2019225721784776in"}
-
-<span id="_Toc416272009" class="anchor"></span>Figure 15: Signal
-Conditioning Circuit with LM386
+![](./media/media/image17.emf)
+Figure 15: Signal Conditioning Circuit with LM386
 
 Circuit Characteristics:
 
@@ -1215,11 +922,11 @@ Circuit Characteristics:
 -   The analog passive filter used was a low-pass filter of cut-off
     frequency 10 Hz.
 
-    1.  ### Real Time Constraints:
+	### Real Time Constraints:
 
 -   noise was removed but heart sounds were not audible.
 
-    1.  ### ***Prototype*** III:
+    3.  ### ***Prototype*** III:
 
 <!-- -->
 
@@ -1237,13 +944,10 @@ Circuit Characteristics:
     the environmental noises. It was further amplified by multiplying
     with a scalar multiple 100.
 
-![](./media/media/image18.jpeg){width="4.389224628171479in"
-height="3.1041666666666665in"}
+![](./media/media/image18.jpeg)
+Figure 16: Tuning the stethoscope between bell and diaphragm
 
-<span id="_Toc416272010" class="anchor"></span>Figure 16: Tuning the
-stethoscope between bell and diaphragm
-
-### Real Time constraints: 
+	### Real Time constraints: 
 
 -   The stethoscope has to be tuned in between the bell and the
     diaphragm to record the heart beats. Initial tuning of the
@@ -1255,8 +959,8 @@ stethoscope between bell and diaphragm
     inserted inside the rubber tube of the stethoscope. Hence, noise
     becomes very loud even if the tube is touched.
 
-    1.  MODULE 2: Analysis of the of pre-recorded abnormal and normal cases using MATLAB
-        --------------------------------------------------------------------------------
+MODULE 2: Analysis of the of pre-recorded abnormal and normal cases using MATLAB
+--------------------------------------------------------------------------------
 
 The goal of this module is to develop an algorithm for detecting and
 classifying murmurs. The analysis has been made on 138 various heart
@@ -1272,9 +976,6 @@ checked.
 
 ### Prototype I: Using Energy estimate to classify the signals
 
-#### Algorithm
-
-TRUE FALSE
 
 **Explanation:**
 
@@ -1292,66 +993,48 @@ used for comparison between the signals.
 
 Test Signal: 04 Apex, Mid Sys Click, Supine, ll\_0.00-0.08.wav
 
-totaltime = 8.9088 %in Seconds
+>totaltime = 8.9088 %in Seconds
 
-totalenergy = 1.8778e+009 %total energy of the signal = \[abs(fft)\]2
+>totalenergy = 1.8778e+009 %total energy of the signal = \[abs(fft)\]2
 
-percentile\_frame = 0.0049 0.0077 0.0031 0.0079 0.0079 0.0049 0.0079
+>percentile\_frame = 0.0049 0.0077 0.0031 0.0079 0.0079 0.0049 0.0079
 
 Percentile Energy calculated per frame, where each frame consists of 2
 beats)
 
-![](./media/media/image19.png){width="5.968055555555556in"
-height="2.15625in"}
-
-<span id="_Toc416272011" class="anchor"></span>Figure 17: Energy
-percentile calculation: test signal : 2beats per frame
+![](./media/media/image19.png)
+Figure 17: Energy percentile calculation: test signal : 2beats per frame
 
 Database signal:
 
 02 Apex, Split S1, Supine, bell\_0.00-0.07.wav
 
-fs = 44100 %Hz
+> fs = 44100 %Hz
+> totalenergy = 4.1233e+008
+> percentile\_frame = 0.0070 0.0066 0.0072 0.0108 0.0111 0.0098 0.0114
 
-totalenergy = 4.1233e+008
+![](./media/media/image20.png)
 
-percentile\_frame = 0.0070 0.0066 0.0072 0.0108 0.0111 0.0098 0.0114
-
-![](./media/media/image20.png){width="5.968055555555556in"
-height="2.15625in"}
-
-<span id="_Toc416272012" class="anchor"></span>Figure 18: Energy
-percentile calculation: database signal
+Figure 18: Energy percentile calculation: database signal
 
 *4 beats per frame:*
-
-Test Signal: 05 Apex, S3, LLD, Bell\_part 5.1
-
-totaltime = 9.0656 %in seconds
-
-totalenergy =1.6814e+009
-
-percentile\_frame = 0.0214 0.0229 0.0281 0.0227 0.0229
-
+> Test Signal: 05 Apex, S3, LLD, Bell\_part 5.1
+> totaltime = 9.0656 %in seconds
+> totalenergy =1.6814e+009
+> percentile\_frame = 0.0214 0.0229 0.0281 0.0227 0.0229
 (Percentile Energy calculated per frame, where each frame consists of 4
 beats)
 
-![](./media/media/image21.jpeg){width="5.960416666666666in"
-height="2.1506944444444445in"}
+![](./media/media/image21.jpeg)
+Figure 19: Energy percentile Calculations, Test Signal
 
-<span id="_Toc416272013" class="anchor"></span>Figure 19: Energy
-percentile Calculations, Test Signal
+> Database Signal: 06 Apex, Early Sys Mur, Supine, Bell\_part 6.1
+> totaltime =10.0582 %in seconds
+> totalenergy =5.6634e+008
+> percentile\_frame = 0.0137 0.0142 0.0275 0.0143 0.0271 0.0147 0.0271
 
-Database Signal: 06 Apex, Early Sys Mur, Supine, Bell\_part 6.1
-
-totaltime =10.0582 %in seconds
-
-totalenergy =5.6634e+008
-
-percentile\_frame = 0.0137 0.0142 0.0275 0.0143 0.0271 0.0147 0.0271
-
-![](./media/media/image22.png){width="5.968055555555556in"
-height="2.15625in"}
+![](./media/media/image22.png)
+Figure 20: Energy WHAT IS HERE? 
 
 #### Conclusion:
 
@@ -1371,7 +1054,6 @@ height="2.15625in"}
 
 #### Algorithm
 
-TRUE FALSE
 
 #### Explanation:
 
@@ -1382,11 +1064,9 @@ commonly used for searching a long signal for a shorter, known feature.
 It also determines the similarity between two signals. For continuous
 functions f and g, the cross-correlation is defined as:
 
-$$………………………………….(1)
 
 where f\* denotes the complex conjugate of f and
-![](./media/media/image24.jpeg){width="0.10347222222222222in"
-height="9.444444444444444e-2in"}is the lag. There are several
+![](./media/media/image24.jpeg)is the lag. There are several
 correlation coefficients, often denoted ρ or r, measuring the degree of
 correlation.
 
@@ -1402,109 +1082,85 @@ consists of S1,S2 and S3. Also there is another abnormality called
 Click, which occurs after the systole. Like the name say, the murmur
 occurs in the late systolic side.
 
-![](./media/media/image25.png){width="5.697222222222222in"
-height="3.0097222222222224in"}
-
-<span id="_Toc416272015" class="anchor"></span>Figure 21: Signal in Time
-domain
+![](./media/media/image25.png)
+igure 21: Signal in Time domain
 
 Figure 21 depicts the envelope of the signal before rectification. This
 waveform is similar to that observed in an ECG. All the peaks and
 valleys can be distinctly noted here.
 
-![](./media/media/image26.png){width="5.676388888888889in"
-height="2.957638888888889in"}
-
-<span id="_Toc416272016" class="anchor"></span>Figure 22: Envelope of
+![](./media/media/image26.png)
+Figure 22: Envelope of
 the Signal
 
 The Figure 22 depicts the rectified version of Figure 21. Here also, the
 features of the abnormality can be distinctly noted.
 
-![](./media/media/image27.png){width="5.676388888888889in"
-height="3.0305555555555554in"}
+![](./media/media/image27.png)
 
-<span id="_Toc416272017" class="anchor"></span>Figure 23: Rectified
+Figure 23: Rectified
 signal for further peak detection
 
 Figure 23 depicts the normalized version of figure 22. While recording
 sounds there can be differences in the amplitudes. Hence to equalize all
 those irregularities in amplitude, the signal is normalized.
 
-![](./media/media/image27.png){width="5.676388888888889in"
-height="3.0305555555555554in"}
-
-<span id="_Toc416272018" class="anchor"></span>Figure 24: Normalized
+![](./media/media/image27.png)
+Figure 24: Normalized
 signal
 
 The signal is the divided into sets which consist of data from one S1 to
 the next S1. This makes correlation more accurate because only required
 features are compared, hence reducing the execution time .
 
-![](./media/media/image28.png){width="5.625in"
-height="2.9166666666666665in"}
+![](./media/media/image28.png)
 
-<span id="_Toc416272019" class="anchor"></span>Figure 25: The separated
+Figure 25: The separated
 signal which will be used for correlation
 
 A similar procedure is carried forward for the database signals as well.
 
 Database Signal 1: **03 Apex, S4, LLD, Bell\_part 3.3**
 
-![](./media/media/image29.emf){width="6.0in"
-height="2.982128171478565in"}
-
-<span id="_Toc416272020" class="anchor"></span>Figure 26: 03 Apex, S4,
+![](./media/media/image29.emf)
+Figure 26: 03 Apex, S4,
 LLD, Bell\_part 3.3
 
 Database Signal 2 : 04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav
 
-![](./media/media/image30.emf){width="6.0in"
-height="3.2916666666666665in"}
-
-<span id="_Toc416272021" class="anchor"></span>Figure 27: 04 Apex, Mid
+![](./media/media/image30.emf)
+Figure 27: 04 Apex, Mid
 Sys Click, Supine, Bell\_part 4.5.wav
 
 Database Signal 3 : 05 Apex, S3, LLD, Bell\_part 5.4.wav
 
-![](./media/media/image31.emf){width="6.458333333333333in"
-height="3.28125in"}
-
-<span id="_Toc416272022" class="anchor"></span>Figure 28: 05 Apex, S3,
-LLD, Bell\_part 5.4.wav
+![](./media/media/image31.emf)
+Figure 28: 05 Apex, S3, LLD, Bell\_part 5.4.wav
 
 Database Signal 4: 06 Apex, Early Sys Mur, Supine, Bell\_part 6.3.wav
 
-![](./media/media/image32.emf){width="6.541666666666667in"
-height="3.0208333333333335in"}
-
-<span id="_Toc416272023" class="anchor"></span>Figure 29: 06 Apex, Early
+![](./media/media/image32.emf)
+Figure 29: 06 Apex, Early
 Sys Mur, Supine, Bell\_part 6.3.wav
 
 Database Signal 5: 09 Apex, Holo Sys Mur, Supine, Bell\_part 9.1
 
-![](./media/media/image33.emf){width="6.479166666666667in"
-height="3.28125in"}
-
-<span id="_Toc416272024" class="anchor"></span>Figure 30: 09 Apex, Holo
+![](./media/media/image33.emf)
+Figure 30: 09 Apex, Holo
 Sys Mur, Supine, Bell\_part 9.1
 
 Database Signal 6: 10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part
 10.2.wav
 
-![](./media/media/image34.emf){width="6.5in"
-height="3.4895833333333335in"}
-
-<span id="_Toc416272025" class="anchor"></span>Figure 31: 10 Apex, Sys
+![](./media/media/image34.emf)
+Figure 31: 10 Apex, Sys
 Click & Late Sys Mur, LLD, Bell\_part 10.2.wav
 
 Database Signal 7: 01 Apex, Normal S1 S2, Supine, Bell - Copy\_part
 1.1.wav
 
-![](./media/media/image35.emf){width="6.197916666666667in"
-height="2.9479166666666665in"}
-
-<span id="_Toc416272026" class="anchor"></span>Figure 32: 01 Apex,
+![](./media/media/image35.emf)
+Figure 32: 01 Apex,
 Normal S1 S2, Supine, Bell - Copy\_part 1.1.wav
 
 As per the waveforms the maximum correlation should be with that of the
@@ -1517,54 +1173,35 @@ match has been categorized into 4 cases. Since a 99% match is set as
 threshold and since the test signal can be either normal or diseased,
 the output is divided into four cases-
 
-![](./media/media/image36.emf){width="4.704094488188977in"
-height="2.21875in"}
-
-<span id="_Toc416272027" class="anchor"></span>Figure 33: Notations
+![](./media/media/image36.emf)
+Figure 33: Notations
 followed
 
 Peaks: Value of the S1 peak; t : position at which it occurs
 
-peaks1 = 0.9914 0.9818 0.9918 1.0000 0.9649 0.9997 0.9833 0.9986 0.9942
-0.9977
-
-t1 = 24 131 242 352 464 571 680 791 904 1014
-
-peaks2 = 0.9857 0.9881 0.9880 1.0000 0.9784 0.9917 0.9763 0.9928 0.9984
-
-t2 = 69 178 284 393 499 611 721 832 941
-
-peaks3 = 0.9522 0.9914 1.0000 0.9898 0.9933 0.9898 0.9974 0.9835 0.9912
-0.9812
-
-t3 = 25 157 291 424 559 694 828 961 1096 1232
-
-peaks4 = 0.9992 0.9636 0.9983 0.9569 0.9840 0.9826 0.9766 0.9732 0.9933
-0.9658 0.9934 0.9527 0.9728 0.9632 0.9767 0.9738 0.9848 0.9624 1.0000
-0.9695 0.9722
-
-t4 = 25 111 157 244 290 378 426 513 559 646 692 780 825 912 958 1044
-1089 117 1222 1309 1355
-
-peaks5 = 0.9891 0.9948 0.9957 0.9910 0.9878 0.9969 0.9892 1.0000 0.9921
-0.9894
-
-t5 = 26 148 274 396 524 645 774 895 1022 1144
-
-peaks6 = 0.9791 0.9809 0.9817 0.9800 0.9922 0.9754 0.9054 0.9802 0.9825
-0.9785 1.0000
-
-t6 = 26 141 266 389 512 629 705 759 882 1005 1129
-
-peaks7 = 0.9617 0.9707 1.0000 0.9811 0.9763 0.9695 0.9765 0.9791 0.9812
-
-t7 = 25 117 209 301 393 485 577 669 761
+> peaks1 = 0.9914 0.9818 0.9918 1.0000 0.9649 0.9997 0.9833 0.9986 0.9942 0.9977
+> t1 = 24 131 242 352 464 571 680 791 904 1014
+> peaks2 = 0.9857 0.9881 0.9880 1.0000 0.9784 0.9917 0.9763 0.9928 0.9984
+> t2 = 69 178 284 393 499 611 721 832 941
+> peaks3 = 0.9522 0.9914 1.0000 0.9898 0.9933 0.9898 0.9974 0.9835 0.9912 0.9812
+> t3 = 25 157 291 424 559 694 828 961 1096 1232
+> peaks4 = 0.9992 0.9636 0.9983 0.9569 0.9840 0.9826 0.9766 0.9732 0.9933 0.9658 0.9934 0.9527 0.9728 0.9632 0.9767 0.9738 0.9848 0.9624 1.0000 0.9695 0.9722
+> t4 = 25 111 157 244 290 378 426 513 559 646 692 780 825 912 958 1044
+> 1089 117 1222 1309 1355
+> peaks5 = 0.9891 0.9948 0.9957 0.9910 0.9878 0.9969 0.9892 1.0000 0.9921 0.9894
+> t5 = 26 148 274 396 524 645 774 895 1022 1144
+> peaks6 = 0.9791 0.9809 0.9817 0.9800 0.9922 0.9754 0.9054 0.9802 0.9825 0.9785 1.0000
+> t6 = 26 141 266 389 512 629 705 759 882 1005 1129
+> peaks7 = 0.9617 0.9707 1.0000 0.9811 0.9763 0.9695 0.9765 0.9791 0.9812
+> t7 = 25 117 209 301 393 485 577 669 761
+> 
 
 *10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part 10.1.wav *
 
 Here the rows& columns represent the output match of different sets of
 S1 to S1 correlated with different database signal sets.
 
+```
 cc1 =
 
 11 11 11 11 11 11 11 11 11
@@ -1580,9 +1217,9 @@ cc1 =
 11 11 11 11 11 11 11 11 11
 
 11 11 11 11 11 11 11 11 11
-
+```
 *04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav *
-
+```
 cc2 =
 
 11 11 11 11 11 11 11 11
@@ -1602,9 +1239,9 @@ cc2 =
 11 10 11 10 11 11 11 11
 
 11 11 11 11 11 11 11 11
-
+```
 *03 Apex, S4, LLD, Bell\_part 3.3.wav *
-
+```
 cc3 = 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
@@ -1618,9 +1255,9 @@ cc3 = 10 10 10 10 10 10 10 10 10
 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
-
+```
 *05 Apex, S3, LLD, Bell\_part 5.4.wav *
-
+```
 cc4 = 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
@@ -1638,9 +1275,9 @@ cc4 = 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
-
+```
 *06 Apex, Early Sys Mur, Supine, Bell\_part 6.3.wav *
-
+```
 cc5 =
 
 10 10 10 10 10 10 10 10 10
@@ -1660,9 +1297,9 @@ cc5 =
 10 10 10 10 10 10 10 10 10
 
 10 10 10 10 10 10 10 10 10
-
+```
 *09 Apex, Holo Sys Mur, Supine, Bell\_part 9.1.wav *
-
+```
 cc6 =
 
 11 10 10 10 11 10 10 10 10 10
@@ -1682,9 +1319,9 @@ cc6 =
 11 10 11 11 11 10 10 11 11 10
 
 11 10 10 10 11 10 10 10 10 10
-
+```
 *01 Apex, Normal S1 S2, Supine, Bell - Copy\_part 1.1.wav *
-
+```
 ccnormal =
 
 101 101 101 101 101 101 101 101
@@ -1704,7 +1341,7 @@ ccnormal =
 101 101 101 101 101 101 101 101
 
 101 101 101 101 101 101 101 101
-
+```
 ***Conclusion: ***
 
 1\. The maximum number of 11s are observed in the case of cc1 which
@@ -1751,10 +1388,8 @@ LCD interfaced to 8051 in the board.
 
 ### Working Screenshot of the project
 
-![](./media/media/image37.png){width="5.958333333333333in"
-height="3.3229166666666665in"}
-
-<span id="_Toc416272028" class="anchor"></span>Figure 34: Working
+![](./media/media/image37.png)
+Figure 34: Working
 Screenshot of the project
 
 ### Results:
@@ -1767,11 +1402,8 @@ function.
 **Test Signal:** X11: 10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part
 10.1.wav
 
-![](./media/media/image38.png){width="6.845187007874015in"
-height="2.6549343832020997in"}
-
-<span id="_Toc416272029" class="anchor"></span>Figure 35: **Test
-Signal:** X11: 10 Aortic, Sys Click & Late Sys Mur, LLD, Bell
+![](./media/media/image38.png)
+Figure 35: **Test Signal:** X11: 10 Aortic, Sys Click & Late Sys Mur, LLD, Bell
 
 The database signals are preprocessed and embedded into the code after
 separating them into sets of heartbeats.
@@ -1779,77 +1411,60 @@ separating them into sets of heartbeats.
 **Database Signal 1**: 04 Apex, Mid Sys Click, Supine, Bell\_part
 4.5.wav
 
-![](./media/media/image39.png){width="6.874359142607174in"
-height="2.96875in"}
-
-<span id="_Toc416272030" class="anchor"></span>Figure 36: Database
-Signal 1: 04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav
+![](./media/media/image39.png)
+Figure 36: Database Signal 1: 04 Apex, Mid Sys Click, Supine, Bell\_part 4.5.wav
 
 **Database Signal 2:** 10 Aortic, Sys Click & Late Sys Mur, LLD,
 Bell\_part 10.5.wav
 
-![](./media/media/image38.png){width="6.816321084864392in"
-height="2.8125in"}
+![](./media/media/image38.png)
+Figure 37: **Database
 
-<span id="_Toc416272031" class="anchor"></span>Figure 37: **Database
 Signal 2:** 10 Apex, Sys Click & Late Sys Mur, LLD, Bell\_part 10.5.wav
 
 **Database Signal 3**: 03 Apex, S4, LLD, Bell\_part 3.3.wav
 
-![](./media/media/image40.png){width="6.884975940507436in"
-height="2.7604166666666665in"}
-
-<span id="_Toc416272032" class="anchor"></span>Figure 38: **Database
+![](./media/media/image40.png)
+Figure 38: **Database
 Signal 3**: 03 Apex, S4, LLD, Bell\_part 3.3.wav
 
 **Database Signal 4**: 05 Apex, S3, LLD, Bell\_part 5.4.wav
 
-![](./media/media/image41.png){width="6.404494750656168in"
-height="2.7604166666666665in"}
+![](./media/media/image41.png)
 
-<span id="_Toc416272033" class="anchor"></span>Figure 39: Database
-Signal 4: 05 Apex, S3, LLD, Bell\_part 5.4.wav
+Figure 39: Database Signal 4: 05 Apex, S3, LLD, Bell\_part 5.4.wav
 
 The results obtained after correlating the test signal with Database
 signals.
 
 #### Correlation with Database signal 1:
 
-![](./media/media/image42.png){width="6.395833333333333in"
-height="2.9479166666666665in"}
+![](./media/media/image42.png)
 
-<span id="_Toc416272034" class="anchor"></span>Figure 40: Correlation
-with Database signal 1:
+Figure 40: Correlation with Database signal 1:
 
 **Max correlation value noted: 30.8712**
 
 #### Correlation with Database signal 2:
 
-![](./media/media/image43.png){width="6.935498687664042in"
-height="2.8958333333333335in"}
-
-<span id="_Toc416272035" class="anchor"></span>Figure 41: Correlation
+![](./media/media/image43.png)
+Figure 41: Correlation
 with Database signal 2:
 
 **Max Correlation Value Noted: 32.41663**
 
 #### Correlation with Database signal 3:
 
-![](./media/media/image44.png){width="6.759444444444444in"
-height="2.875in"}
+![](./media/media/image44.png)
 
-<span id="_Toc416272036" class="anchor"></span>Figure 42: Correlation
-with Database signal 3:
+Figure 42: Correlation with Database signal 3:
 
 **Max Correlation Value Noted: 23.26266**
 
 #### Correlation with Database signal 4:
 
-![](./media/media/image45.png){width="6.802083333333333in"
-height="2.875in"}
-
-<span id="_Toc416272037" class="anchor"></span>Figure 43: Correlation
-with Database signal 4:
+![](./media/media/image45.png)
+Figure 43: Correlation with Database signal 4:
 
 **Max Correlation Value Noted: 19.89651**
 
@@ -1857,131 +1472,20 @@ with Database signal 4:
 
 #### Output shown on LCD display through 8051
 
-![](./media/media/image46.jpeg){width="3.748990594925634in"
-height="6.729166666666667in"}
-
-<span id="_Toc416272038" class="anchor"></span>Figure 44: Output shown
-on LCD display through 8051
+![](./media/media/image46.jpeg) 
+Figure 44: Output shown on LCD display through 8051
 
 ### Conclusion
 
 1.  Maximum correlation is obtained with Database signal 2.
 
-<!-- -->
 
-1.  The input is a diseased heart sound.
 
-2.  The Identified disease is “Aortic Systolic Murmur”, it rightly
+2.  The input is a diseased heart sound.
+
+3.  The Identified disease is “Aortic Systolic Murmur”, it rightly
     corresponds to the database signal 2 which is “10 Aortic, Sys Click
     & Late Sys Mur, LLD, Bell\_part 10.5.wav”.
-
-3.  <span id="_Toc416271779" class="anchor"><span id="_Toc416271933"
-    class="anchor"></span></span>
-
-    1.  <span id="_Toc416271780" class="anchor"><span id="_Toc416271934"
-        class="anchor"></span></span>
-
-    2.  <span id="_Toc416271781" class="anchor"><span id="_Toc416271935"
-        class="anchor"></span></span>
-
-    3.  <span id="_Toc416271782" class="anchor"><span id="_Toc416271936"
-        class="anchor"></span></span>
-
-    4.  Standards used in the project 
-        ------------------------------
-
-        1.  ### Stethoscope
-
--   IS 3391 (1965) :This standard lays down the requirements for
-    binaural stethoscope used for the detection and study of sounds
-    arising within the human or animal body
-
--   Rubber tubing Conforming to Grade I of IS:637-1955. All
-    metal-to-metal joints shall be of the Luer lock type conforming to
-    the dimensions specified in IS :3234-1965.
-
--   Finish-All brass parts shall be chromium plated over nickel
-    conforming to Grade C of IS:1068-1958.
-
-    1.  ### Collar microphone
-
-<!-- -->
-
--   Frequency Range: 180-220 MHz.
-
--   S/N Ratio &gt; 100 dB
-
-    1.  ### UART (Universal Asynchronous Receiver transmitter)
-
-<!-- -->
-
--   It is based on industry standard TL16C550 asynchronous communication
-    element which is a functional upgrade of the TL16C450.
-
--   Physical layer standard is RS232 communication which is between a
-    DTE (Data Terminal Equipment) i.e., computer COM (Communication)
-    port and DCE (Data Communication Equipment) i.e., modem port
-
-    1.  ### IEEE754 is technical standard for floating point computation.
-
-CHAPTER V: SCHEDULES, TASKS AND MILESTONES
-==========================================
-
-There were four major milestones in this project.
-
--   Hardware Signal Conditioning Circuit Implementation
-
--   Developing algorithm for classifying the sounds in MATLAB
-
--   Conversion of MATLAB implemented functions into C code to dump
-    into DSK6713.
-
--   Recording Abnormal Heart sounds in real time and denoising the
-    signal in DSK6713
-
-Tasks were split up among group members according to each member’s level
-of expertise or comfort. Each task will have a leader who is responsible
-for completion of that task. However, the other group members are
-expected to provide assistance if needed. This way, an engineer can
-concentrate on a task but still get help if needed. Also, each tasks\`
-respective leader is held accountable if the task fails.
-
-CHAPTER VI: PROJECT DEMONSTRATION
-=================================
-
-The most important specification that the Clinical Heart Disease
-Diagnosis System has to meet is to be competitive against an experienced
-cardiologist while still being an autonomous system. Therefore the
-primary project demonstration has to be performed on real time over a
-healthy as well as a diseased patient. The constraints of the
-demonstration are the failure to denoise the extra evident ambient noise
-present while performing the analysis.
-
-Building the entire system in real time, with all possible real time
-constraints taken into consideration, like the absence of a person with
-a heart disease, it is a little impractical to have the live
-demonstration with an unhealthy patient. Therefore a video of the
-demonstration will be shown.
-
-CHAPTER VII: COST ANALYSIS
-==========================
-
-This is a detailed cost analysis on the required parts for the Clinical
-Heart Monitoring System.
-
-***Parts Cost of each part(In Rs) ***
-
-1.  Stethoscope 7000
-
-2.  Collar Microphone 1000
-
-3.  DSK6713 Starter Kit 22000
-
-4.  ESA MCB 51 Kit 1500
-
-5.  Other Components 500
-
-> **Total…………………………………….32000**
 
 CHAPTER VIII: SUMMARY
 =====================
@@ -2040,15 +1544,3 @@ CHAPTER IX: REFERENCES
 
 7.  Database heart sound from “University of Michigan Heart Sound and
     Murmur Library”\[Online\]Available at
-    <https://www.umms.med.umich.edu/psb/>.
-
-Appendix A
-==========
-
-Gantt Chart {#gantt-chart .ListParagraph}
------------
-
-![](./media/media/image47.png){width="6.88286198600175in"
-height="6.03125in"}
-
-<span id="_Toc416272039" class="anchor"></span>Figure 45: Gantt Chart
